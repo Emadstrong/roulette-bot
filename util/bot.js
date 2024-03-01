@@ -14,7 +14,7 @@ export default async function (debug = false, config, is_replit = (process.env.R
   let ready_first;
   bot.on("ready", async () => {
     if (spinner) spinner.success({ text: `Logged in as \x1B[1m${bot.user.username}\u001b[0m (\x1B[4m${bot.user.id}\u001b[0m)` });
-    bot.editStatus(`online`, [{ name: await settings.get("status_bot") || "Bot By Shuruhatik", type: await settings.get("status_type") || 0 }]);
+    bot.editStatus(`online`, [{ name: await settings.get("status_bot") || "روليت بوت", type: await settings.get("status_type") || 0 }]);
     if (!ready_first) {
       console.log(`\n\u001b[32;1m` + shuruhatik + `\u001b[0m\u001b[0m\n\n\u001b[1mﻲﺒﻨﻟﺍ ﻰﻠﻋ ةﻼﺻﻭ رﺎﻔﻐﺘﺳﻻﺍ ﺮﺜﻛﻭ ،ﻪﻠﻟﺍ ﺮﻛﺫ َﺲﻨﺗ ﻻ\u001b[0m`);
       console.log(`\n\u001b[32;1m◤\u001b[0m\u001b[0m\u001b[1m https://api.shuruhatik.com/add/${bot.user.id} \u001b[32;1m◢\u001b[0m`);
